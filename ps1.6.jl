@@ -13,16 +13,17 @@ m = Model(GLPK.Optimizer)
 @objective(m, Min, 0.8x1 + 0.2x2 + 0.4x3 + x4)
 
 # Adding constraints
-@constraint(m, constraint1, 16x1 + 8x2 + 6x3 + 12x4 <= 90)
+@constraint(m, constraint1, 16x1 + 8x2 + 6x3 + 12x4 <= 80)
 @constraint(m, constraint2, 3x1 + 11x2 <= 40)
 @constraint(m, constraint3, 7x1 + 8x2 + 12x3 + 26x4 >= 160)
-@constraint(m, constraint4, 2x1 + 9x3 <= 25)
-@constraint(m, constraint5, x1 >= 1)
+# @constraint(m, constraint4, 2x1 + 9x3 <= 25)
+# @constraint(m, constraint5, x1 >= 1)
 
 # Solving the optimization problem
 JuMP.optimize!(m)
 
 # Printing the prepared optimization model
+print(solution_summary(m))
 print(m)
 
 # Print the information about the optimum.
