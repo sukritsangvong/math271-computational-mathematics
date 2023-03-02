@@ -9,7 +9,7 @@ Run `python3 clean_csv.py` to get clean_comps_data.csv.
 
 Run `julia divide-comps-team.jl`
 
-# To Run with Flags
+# To Run with Flags:
 
 ### Dataset format
 (see example in `flags_students.csv` and `flags_projects.csv`)
