@@ -14,6 +14,8 @@ Run `julia divide-comps-team.jl`
 ### Dataset format
 (see example in `flags_students.csv` and `flags_projects.csv`)
 
+(can add as many flags as you want)
+
 flags_students.csv:
 ```
 column i:   flag i
